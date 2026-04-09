@@ -1,0 +1,10 @@
+# Raw audio files - too large for GitHub
+data/raw/
+output/preprocessed/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
