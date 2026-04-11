@@ -26,13 +26,15 @@ The raw audio files are too large to upload in GitHub.
 so i will uplaod the updated project folder drive link soon :)
 
 ## Project Structure
+```
 lung_sound_project/
 ├── data/
-│   └── raw/                        ← original 920 .wav files
+│   └── raw/                    ← original 920 .wav files
 ├── output/
-│   ├── preprocessed/               ← cleaned 920 .wav files
-│   └── features/                   ← NEW
-│       ├── mfcc_features.npy       ← feature matrix (920 x 26)
-│       └── file_names.npy          ← filenames list
+│   ├── preprocessed/           ← cleaned 920 .wav files
+│   └── features/               ← NEW
+│       ├── mfcc_features.npy   ← feature matrix (920 x 26)
+│       └── file_names.npy      ← filenames list
 └── notebooks/
     └── preprocessing.ipynb
+```
