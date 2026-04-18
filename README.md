@@ -28,13 +28,31 @@ so i will uplaod the updated project folder drive link soon :)
 ## Project Structure
 ```
 lung_sound_project/
+│
 ├── data/
-│   └── raw/                    ← original 920 .wav files
+│   ├── raw/                          ← 920 original .wav files (local only)
+│   ├── audio_and_txt_files/          ← 920 annotation .txt files
+│   ├── patient_diagnosis.csv         ← disease labels
+│   ├── filename_differences.txt      ← dataset documentation
+│   └── filename_format.txt           ← dataset documentation
+│
 ├── output/
-│   ├── preprocessed/           ← cleaned 920 .wav files
-│   └── features/               ← NEW
-│       ├── mfcc_features.npy   ← feature matrix (920 x 26)
-│       └── file_names.npy      ← filenames list
-└── notebooks/
-    └── preprocessing.ipynb
+│   ├── preprocessed/                 ← 920 cleaned .wav files (local only)
+│   ├── features/
+│   │   ├── mfcc_features.npy         ← MFCC feature matrix (920 × 26)
+│   │   └── file_names.npy            ← filenames list
+│   └── models/
+│       ├── best_model.keras          ← V1 model (too large, local only)
+│       ├── best_model_v2.keras       ← V2 baseline CNN
+│       ├── best_model_v3.keras       ← V3 deeper CNN (best single model)
+│       ├── best_model_v4.keras       ← V4 CNN with augmentation
+│       └── label_classes.npy         ← disease class names
+│
+├── notebooks/
+│   ├── preprocessing.ipynb           ← Stage 1
+│   ├── mfcc_extraction.ipynb         ← Stage 2
+│   └── cnn_training.ipynb            ← Stage 3
+│
+├── .gitignore                        ← excludes raw, preprocessed, large model
+└── README.md                         ← project description
 ```
